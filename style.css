@@ -1,0 +1,261 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+/* Color Variables */
+:root {
+    --bg-color: #FFF8DC;
+    --second-bg-color: #FFF8DC;
+    --text-color: #333333;
+    --main-color: #E74C3C;
+}
+
+/* Global Styles */
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 12%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+/* Navbar */
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* Menu Icon */
+#menu-icon {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 5rem 10%;
+}
+
+.home h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.home h1 span {
+    color: var(--main-color);
+}
+
+/* Books Section */
+.books-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.books-section h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Book Card */
+.book {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+.book img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.book h3 {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+/* Read Button */
+.read-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: var(--main-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.read-btn:hover {
+    background: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 5%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    .navbar a {
+        margin: 15px 0;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .books-container {
+        flex-direction: column;
+    }
+
+    .book {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* Suggestions Section */
+.suggestions-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.suggestion-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.suggestion-box p {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.suggestion-box textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    resize: none;
+}
+
+.suggestion-box .submit-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: 0.3s ease;
+}
+
+.suggestion-box .submit-btn:hover {
+    background: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .suggestion-box {
+        width: 90%;
+    }
+}
+
